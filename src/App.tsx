@@ -17,22 +17,21 @@ type Project = {
   impact: string;
   equipment: string[];
   categories: string[];
-  placeholder?: boolean;
   point: [number, number];
 };
 
 const portfolio = {
-  name: ' Eng Doughlas',
+  name: 'Eng Doughlas',
   role: 'Lead Biomedical Engineer & Clinical Engineering Consultant',
-  tagline: 'Keeping healthcare technology uptodate, safe, reliable and ready for cuting edge applications.',
+  tagline: 'Keeping healthcare technology current, safe, reliable and ready for advanced clinical care.',
   email: 'bosiredoughlas001@gmail.com',
   phone: '+254 702 781 964',
   linkedin: 'https://www.linkedin.com/in/daggieh/',
   about: 'I am a Biomedical Engineer and Healthcare Technology Consultant with 6+ years of experience across clinical, medical-device and healthcare-systems environments in East Africa. I lead equipment and infrastructure work from technical assessment through installation, commissioning and lifecycle support.',
-  aboutDetail: 'My work connects clinical needs with practical engineering: medical gas systems, dental and diagnostic equipment, device compliance, maintenance planning and staff training. I care about solutions that are safe, maintainable and ready for the people who depend on them.',
+  aboutDetail: 'My work connects clinical needs with practical engineering across diagnostic, laboratory and radiology/imaging equipment; therapeutic, surgical, monitoring and life-support technologies; dental and sterilization systems; rehabilitation devices; medical gas systems; and hospital infrastructure. I support the full equipment lifecycle, from needs assessment and specification through installation, commissioning, safety checks, preventive and corrective maintenance, calibration, asset planning, compliance coordination and user training. My focus is safe, reliable technology that fits clinical workflows and can be maintained over time.',
   stats: [
     { value: '6+', label: 'years in biomedical engineering' },
-    { value: '20+', label: 'hospital branches supported' },
+    { value: '20+', label: 'hospitals and clinics supported' },
     { value: '99%+', label: 'equipment uptime reported' },
   ],
 };
@@ -60,14 +59,20 @@ const skillGroups: { title: string; Icon: LucideIcon; skills: string[] }[] = [
   { title: 'Sterilisation & Infection Control', Icon: ShieldCheck, skills: ['CSSD equipment', 'Sterilisation systems', 'Rehabilitation devices', 'Safe-use orientation'] },
   { title: 'Maintenance & Calibration', Icon: Wrench, skills: ['Preventive maintenance', 'Corrective maintenance', 'Calibration', 'Troubleshooting', 'Equipment audits'] },
   { title: 'Hospital Infrastructure', Icon: BriefcaseBusiness, skills: ['Power & electrical systems', 'HVAC interfaces', 'Water treatment', 'Site coordination', 'Clinical workflow integration'] },
-  { title: 'Asset & Maintenance Systems', Icon: Database, skills: ['Asset inventories', 'Lifecycle planning', 'Service records', 'CAD & process simulation', '[Add CMMS / software tools]'] },
-  { title: 'Standards & Safety', Icon: Check, skills: ['Device conformity support', 'CSDT preparation support', 'MOH / KNRA coordination', 'ISO 13485 certification · ongoing', 'Kenya MDSW study · 2026'] },
+  { title: 'Asset & Maintenance Systems', Icon: Database, skills: ['Asset inventories', 'Lifecycle planning', 'Service records', 'CAD & process simulation'] },
+  { title: 'Standards & Regulatory Affairs', Icon: Check, skills: ['Device conformity support', 'CSDT preparation support', 'MOH / KNRA coordination', 'ISO 13485 certification · ongoing', 'PPB device & IVD registration guidance', 'MDSW / SaMD guideline study · 2026', 'Risk classification & technical documentation', 'Post-market surveillance principles'] },
   { title: 'Leadership & Management', Icon: Users, skills: ['Lead Biomedical Engineer', 'Biomedical Engineering Consultant', 'University Electoral College Chair', 'Technical Advisor', 'Multi-branch operations', 'Project & vendor coordination', 'Clinical staff training · 150+'] },
 ];
 
 const softSkills = ['Leadership', 'Team management', 'Problem solving', 'Communication', 'Safety mindset', 'Training', 'Vendor management', 'Attention to detail'];
 const clients = ['Molars Dental Hospital', 'Epione Health', 'AMEK', 'Sai Pharmaceuticals', 'Elmar Med Systems', 'Technical University of Mombasa'];
 const filters = ['All', 'Medical Gas', 'Equipment Installation', 'Maintenance Programs', 'Consulting', 'Training'];
+const regulatoryResources = [
+  { label: 'PPB MDSW / SaMD guideline', href: 'https://web.pharmacyboardkenya.org/download/guideline-on-regulation-of-medical-device-software-in-kenya-mdsw/' },
+  { label: 'Medical-device & IVD registration guideline', href: 'https://web.pharmacyboardkenya.org/download/guidelines-for-registration-of-medical-devices-including-in-vitro-diagnostics/' },
+  { label: 'Medical-device registration procedure', href: 'https://web.pharmacyboardkenya.org/medical-devices-evaluation-and-registration-procedure/' },
+  { label: 'PPB registered medical-device list', href: 'https://products.pharmacyboardkenya.org/ppb_admin/pages/public_view_md_retained.php' },
+];
 
 const projects: Project[] = [
   {
@@ -79,7 +84,7 @@ const projects: Project[] = [
   {
     number: '02', title: 'Medical gas systems & healthcare infrastructure', role: 'Biomedical Engineering Consultant', location: 'Kenya',
     description: 'Technical consultation and project coordination for medical gas pipeline systems, including oxygen, vacuum, compressed air and manifold systems.',
-    builtFor: 'Beacon of Hope Hospital · PCEA Kikuyu Mission Hospital · Adventist Hospital', impact: 'Coordinated technical planning and delivery across public and private healthcare facilities. [Add confirmed project results.]',
+    builtFor: 'Beacon of Hope Hospital · PCEA Kikuyu Mission Hospital · Adventist Hospital', impact: 'Coordinated technical planning and delivery across public and private healthcare facilities.',
     equipment: ['Oxygen', 'Vacuum', 'Compressed air', 'Manifold systems'], categories: ['Medical Gas', 'Equipment Installation', 'Consulting'], point: [57, 59],
   },
   {
@@ -89,19 +94,7 @@ const projects: Project[] = [
     equipment: ['Theatre', 'Laboratory', 'Laparoscopy', 'Electrosurgery', 'Medical gases'], categories: ['Equipment Installation', 'Consulting', 'Training'], point: [60, 67],
   },
   {
-    number: '04', title: '[Add project: preventive maintenance program]', role: '[Add your role]', location: '[Add facility / location]',
-    description: '[Add the equipment groups, maintenance scope and the problem the program addressed.]',
-    builtFor: '[Add organisation]', impact: '[Add a verified result: uptime, response time, cost avoided or equipment covered.]',
-    equipment: ['[Add equipment]', '[Add tools / systems]'], categories: ['Maintenance Programs'], placeholder: true, point: [47, 53],
-  },
-  {
-    number: '05', title: '[Add project: equipment installation / upgrade]', role: '[Add your role]', location: '[Add facility / location]',
-    description: '[Add the installation, commissioning or infrastructure work and your contribution.]',
-    builtFor: '[Add organisation]', impact: '[Add the outcome and any confirmed scale or performance result.]',
-    equipment: ['[Add equipment]', '[Add systems]'], categories: ['Equipment Installation', 'Medical Gas'], placeholder: true, point: [73, 57],
-  },
-  {
-    number: '06', title: 'Clinical staff training & equipment handover', role: 'Lead Biomedical Engineer', location: 'Six branches · Kenya',
+    number: '04', title: 'Clinical staff training & equipment handover', role: 'Lead Biomedical Engineer', location: 'Six branches · Kenya',
     description: 'Clinical user orientation and training as part of equipment lifecycle support and safe day-to-day operation.',
     builtFor: 'Molars Dental Hospital', impact: '150+ clinical staff trained, as reported in the supplied resume.',
     equipment: ['User orientation', 'Safe operation', 'Handover'], categories: ['Training', 'Consulting'], point: [63, 39],
@@ -246,7 +239,7 @@ function App() {
               <a className="social-button" href={portfolio.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin /></a>
               <a className="social-button" href={`mailto:${portfolio.email}`} aria-label="Email"><Mail /></a>
               <a className="social-button" href={`https://wa.me/${portfolio.phone.replace(/\D/g, '')}`} target="_blank" rel="noreferrer" aria-label="WhatsApp"><Phone /></a>
-              <span className="social-placeholder" title="Add GitHub profile URL"><Github aria-hidden="true" /><span className="sr-only">GitHub profile URL placeholder</span></span>
+              <a className="social-button" href="https://github.com/dag-gieh" target="_blank" rel="noreferrer" aria-label="GitHub"><Github /></a>
             </div>
             <div className="stats-card">
               {portfolio.stats.map((stat) => <div className="stat" key={stat.label}><strong>{stat.value}</strong><span>{stat.label}</span></div>)}
@@ -297,7 +290,11 @@ function App() {
 
         <section className="section section-tint" id="skills">
           <div className="page-width"><SectionHeading first="My" accent="Toolbox" />
-            <div className="toolbox-grid">{skillGroups.map(({ title, Icon, skills }, index) => <article className="tool-card reveal" key={title} style={{ '--delay': `${index * 55}ms` } as React.CSSProperties}><div className="tool-card-heading"><span className="tool-icon"><Icon size={19} /></span><h3>{title}</h3></div><div className="tool-chips">{skills.map((skill) => <span className={skill.startsWith('[') ? 'placeholder-chip' : ''} key={skill}>{skill}</span>)}</div></article>)}</div>
+            <div className="toolbox-grid">{skillGroups.map(({ title, Icon, skills }, index) => <article className="tool-card reveal" key={title} style={{ '--delay': `${index * 55}ms` } as React.CSSProperties}><div className="tool-card-heading"><span className="tool-icon"><Icon size={19} /></span><h3>{title}</h3></div><div className="tool-chips">{skills.map((skill) => <span key={skill}>{skill}</span>)}</div></article>)}</div>
+            <div className="regulatory-resources">
+              <h3>PPB Regulatory References</h3>
+              <div className="regulatory-links">{regulatoryResources.map((resource) => <a key={resource.href} href={resource.href} target="_blank" rel="noreferrer">{resource.label}<ArrowUpRight size={14} /></a>)}</div>
+            </div>
             <div className="soft-skills"><h3>Soft Skills</h3><p>How I work with teams and deliver dependable outcomes</p><div className="marquee-mask"><div className="soft-track">{[...softSkills, ...softSkills].map((skill, index) => <span key={`${skill}-${index}`}>{skill}</span>)}</div></div></div>
           </div>
         </section>
@@ -309,7 +306,6 @@ function App() {
             return <button type="button" className={activeFilter === filter ? 'filter-pill is-active' : 'filter-pill'} key={filter} onClick={() => setActiveFilter(filter)} aria-pressed={activeFilter === filter}>{filter}<span>{count}</span></button>;
           })}</div><button className="button button-primary map-open" type="button" onClick={openMap}><MapPinned size={16} /> View map</button></div>
           <div className="projects-grid">{visibleProjects.map((project) => <ProjectCard project={project} key={project.number} />)}</div>
-          <p className="placeholder-note">Cards marked with brackets are editable placeholders. Replace with confirmed project names, scope, locations and results before publishing.</p>
         </section>
 
         <section className="section section-tint" id="experience">
@@ -319,7 +315,7 @@ function App() {
               {experience.slice(0, 3).map((item, index) => <button type="button" className={`career-node career-node--${index} ${activeExperience === index ? 'is-active' : ''}`} key={item.title} onClick={() => setActiveExperience(index)} aria-pressed={activeExperience === index}><span className="career-node-dot" /><span className="career-node-label"><strong>{item.title}</strong><small>{item.company}</small></span></button>)}
               <div className="career-years"><span>2022</span><span>2023</span><span>2024</span><span>2025</span><span>2026</span></div>
             </div>
-            <article className="experience-card reveal" aria-live="polite"><div><p className="eyebrow">CAREER DETAIL · {String(activeExperience + 1).padStart(2, '0')}</p><h3>{experience[activeExperience].title}</h3><p className="experience-company">{experience[activeExperience].company}</p><span className="experience-dates">{experience[activeExperience].dates}</span></div><p className="experience-summary">{experience[activeExperience].detail}<br /><span>[Add role achievements and verified outcomes.]</span></p><div className="experience-controls"><button type="button" className="icon-button" aria-label="Previous role" onClick={() => setActiveExperience((current) => (current + experience.length - 1) % experience.length)}><ChevronLeft /></button><button type="button" className="icon-button" aria-label="Next role" onClick={() => setActiveExperience((current) => (current + 1) % experience.length)}><ChevronRight /></button></div></article>
+            <article className="experience-card reveal" aria-live="polite"><div><p className="eyebrow">CAREER DETAIL · {String(activeExperience + 1).padStart(2, '0')}</p><h3>{experience[activeExperience].title}</h3><p className="experience-company">{experience[activeExperience].company}</p><span className="experience-dates">{experience[activeExperience].dates}</span></div><p className="experience-summary">{experience[activeExperience].detail}</p><div className="experience-controls"><button type="button" className="icon-button" aria-label="Previous role" onClick={() => setActiveExperience((current) => (current + experience.length - 1) % experience.length)}><ChevronLeft /></button><button type="button" className="icon-button" aria-label="Next role" onClick={() => setActiveExperience((current) => (current + 1) % experience.length)}><ChevronRight /></button></div></article>
             <div className="all-roles">{experience.map((item, index) => <button type="button" className={activeExperience === index ? 'role-row is-active' : 'role-row'} key={`${item.title}-${item.dates}`} onClick={() => setActiveExperience(index)}><span>{item.dates}</span><strong>{item.title}</strong><span>{item.company}</span><ArrowUpRight size={15} /></button>)}</div>
           </div>
         </section>
@@ -332,7 +328,7 @@ function App() {
 
         <section className="section section-tint" id="engagements">
           <div className="page-width"><SectionHeading first="Community" accent="Engagements" />
-            <article className="engagement-card reveal"><div className="engagement-top"><span className="eyebrow">2022 - 2023 · UNIVERSITY LEADERSHIP</span><span className="role-tag">LEADERSHIP</span></div><div className="engagement-body"><div><h3>University electoral leadership & technical advising</h3><p>Technical University of Mombasa</p></div><Users size={25} /></div><ul><li>Spearheaded the first online university elections at TUM.</li><li>Chaired the university electoral college and served as a technical advisor.</li></ul><p className="engagement-placeholder">[Add other community training, speaking or mentoring engagements.]</p></article>
+            <article className="engagement-card reveal"><div className="engagement-top"><span className="eyebrow">2022 - 2023 · UNIVERSITY LEADERSHIP</span><span className="role-tag">LEADERSHIP</span></div><div className="engagement-body"><div><h3>University electoral leadership & technical advising</h3><p>Technical University of Mombasa</p></div><Users size={25} /></div><ul><li>Spearheaded the first online university elections at TUM.</li><li>Chaired the university electoral college and served as a technical advisor.</li></ul></article>
           </div>
         </section>
 
@@ -344,7 +340,6 @@ function App() {
               <a className="contact-item" href={`tel:${portfolio.phone.replace(/\s/g, '')}`}><span><Phone /></span><div><small>PHONE</small><strong>{portfolio.phone}</strong></div></a>
               <div className="contact-item"><span><MapPin /></span><div><small>LOCATION</small><strong>Nairobi, Kenya</strong></div></div>
               <div className="contact-socials"><h4>Connect with Me</h4><div className="social-row"><a className="social-button" href={portfolio.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin /></a><a className="social-button" href={`mailto:${portfolio.email}`} aria-label="Email"><Mail /></a><a className="social-button" href={`https://wa.me/${portfolio.phone.replace(/\D/g, '')}`} target="_blank" rel="noreferrer" aria-label="WhatsApp"><Phone /></a></div></div>
-              <p className="availability-note"><strong>Available for:</strong> [Full-time opportunities, consulting, equipment audits, installation supervision and training.]</p>
             </article>
             <article className="contact-card"><h3>Send Me a Message</h3><form className="contact-form" onSubmit={submitMessage}><input name="name" placeholder="Your Name" aria-label="Your name" required /><input name="email" type="email" placeholder="Your Email" aria-label="Your email" required /><input name="subject" placeholder="Subject" aria-label="Subject" required /><textarea name="message" placeholder="Your Message" aria-label="Your message" required rows={5} /><button className="button button-primary" type="submit">Send Message <ArrowRight size={16} /></button><p className="form-status" aria-live="polite">{formStatus}</p></form></article>
           </div>
