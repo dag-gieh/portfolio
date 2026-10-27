@@ -60,7 +60,8 @@ const skillGroups: { title: string; Icon: LucideIcon; skills: string[] }[] = [
   { title: 'Maintenance & Calibration', Icon: Wrench, skills: ['Preventive maintenance', 'Corrective maintenance', 'Calibration', 'Troubleshooting', 'Equipment audits'] },
   { title: 'Hospital Infrastructure', Icon: BriefcaseBusiness, skills: ['Power & electrical systems', 'HVAC interfaces', 'Water treatment', 'Site coordination', 'Clinical workflow integration'] },
   { title: 'Asset & Maintenance Systems', Icon: Database, skills: ['Asset inventories', 'Lifecycle planning', 'Service records', 'CAD & process simulation'] },
-  { title: 'Standards & Regulatory Affairs', Icon: Check, skills: ['Device conformity support', 'CSDT preparation support', 'MOH / KNRA coordination', 'ISO 13485 certification · ongoing', 'PPB device & IVD registration guidance', 'MDSW / SaMD guideline study · 2026', 'Risk classification & technical documentation', 'Post-market surveillance principles'] },
+  { title: 'Standards & Safety', Icon: Check, skills: ['Device conformity support', 'CSDT preparation support', 'MOH / KNRA coordination', 'ISO 13485 certification · ongoing'] },
+  { title: 'Regulatory Affairs & SaMD', Icon: ShieldCheck, skills: ['PPB device & IVD guidance', 'Medical-device software (MDSW)', 'SaMD guideline study · 2026', 'Risk classification', 'Technical documentation support', 'Cybersecurity & data protection principles', 'Post-market lifecycle oversight'] },
   { title: 'Leadership & Management', Icon: Users, skills: ['Lead Biomedical Engineer', 'Biomedical Engineering Consultant', 'University Electoral College Chair', 'Technical Advisor', 'Multi-branch operations', 'Project & vendor coordination', 'Clinical staff training · 150+'] },
 ];
 
@@ -353,7 +354,7 @@ function App() {
           <header className="map-modal-header"><div><h2 id="map-title">Facilities on the map</h2><p>Locations are illustrative until branch addresses are confirmed.</p></div><button type="button" className="icon-button" aria-label="Close map" onClick={() => setMapOpen(false)}><X /></button></header>
           <div className="map-modal-filters">{['All', 'Medical Gas', 'Equipment Installation', 'Maintenance Programs', 'Consulting', 'Training'].map((filter) => <button key={filter} type="button" className={activeFilter === filter ? 'filter-pill is-active' : 'filter-pill'} onClick={() => { setActiveFilter(filter); setSelectedProject(null); }}>{filter}</button>)}</div>
           <div className="map-modal-content"><div className="facility-map"><div className="map-grid-lines" /><div className="map-label-north">NAIROBI & CONSULTING SITES · SCHEMATIC</div><svg className="map-roads" viewBox="0 0 1000 700" preserveAspectRatio="none" aria-hidden="true"><path d="M0 540 270 360 580 410 1000 80M30 130 300 260 510 120 970 400M100 700 250 20M500 700 650 0M850 700 740 0M0 330 1000 560" /><path d="M0 560 270 380 580 430 1000 100M30 150 300 280 510 140 970 420M120 700 270 20M520 700 670 0M870 700 760 0M0 350 1000 580" className="road-secondary" /></svg>
-            <div className="map-site-cloud" style={{ transform: `scale(${zoom})` }}>{mapProjects.map((project) => <button key={project.number} type="button" className={`map-marker ${selectedProject?.number === project.number ? 'is-selected' : ''} ${project.placeholder ? 'is-placeholder' : ''}`} style={{ left: `${project.point[0]}%`, top: `${project.point[1]}%` }} onClick={() => setSelectedProject(project)} aria-label={`Select ${project.title}`}><span>{project.number}</span></button>)}</div>
+            <div className="map-site-cloud" style={{ transform: `scale(${zoom})` }}>{mapProjects.map((project) => <button key={project.number} type="button" className={`map-marker ${selectedProject?.number === project.number ? 'is-selected' : ''}`} style={{ left: `${project.point[0]}%`, top: `${project.point[1]}%` }} onClick={() => setSelectedProject(project)} aria-label={`Select ${project.title}`}><span>{project.number}</span></button>)}</div>
             <div className="map-zoom"><button type="button" aria-label="Zoom in" onClick={() => setZoom((value) => Math.min(1.35, value + .1))}>+</button><button type="button" aria-label="Zoom out" onClick={() => setZoom((value) => Math.max(.8, value - .1))}>-</button></div>
             <div className="map-disclaimer">ILLUSTRATIVE ONLY · ADD CONFIRMED BRANCH LOCATIONS</div>
             {selectedProject && <article className="map-info-card"><button type="button" aria-label="Close project detail" onClick={() => setSelectedProject(null)}><X size={15} /></button><span className="map-info-number">{selectedProject.number}</span><h3>{selectedProject.title}</h3><p>{selectedProject.location} · {selectedProject.role}</p><div>{selectedProject.impact}</div></article>}
@@ -369,7 +370,7 @@ function SectionHeading({ first, accent }: { first: string; accent: string }) {
 }
 
 function ProjectCard({ project }: { project: Project }) {
-  return <article className={`project-card reveal ${project.placeholder ? 'project-card--placeholder' : ''}`}>
+  return <article className="project-card reveal">
     <div className="project-card-top"><span className="project-number">{project.number}</span><span className="project-mark"><Wrench size={18} /></span></div>
     <h3>{project.title}</h3><div className="project-meta"><span className="role-chip">{project.role}</span><span className="location-chip"><MapPin size={12} />{project.location}</span></div>
     <p className="project-description">{project.description}</p>
