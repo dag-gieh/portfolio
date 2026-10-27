@@ -22,9 +22,9 @@ type Project = {
 };
 
 const portfolio = {
-  name: 'Doughlas Nyarango Bosire',
+  name: ' Eng Doughlas',
   role: 'Lead Biomedical Engineer & Clinical Engineering Consultant',
-  tagline: 'Keeping healthcare technology safe, reliable and ready for care.',
+  tagline: 'Keeping healthcare technology uptodate, safe, reliable and ready for cuting edge applications.',
   email: 'bosiredoughlas001@gmail.com',
   phone: '+254 702 781 964',
   linkedin: 'https://www.linkedin.com/in/daggieh/',
@@ -32,7 +32,7 @@ const portfolio = {
   aboutDetail: 'My work connects clinical needs with practical engineering: medical gas systems, dental and diagnostic equipment, device compliance, maintenance planning and staff training. I care about solutions that are safe, maintainable and ready for the people who depend on them.',
   stats: [
     { value: '6+', label: 'years in biomedical engineering' },
-    { value: '6', label: 'hospital branches supported' },
+    { value: '20+', label: 'hospital branches supported' },
     { value: '99%+', label: 'equipment uptime reported' },
   ],
 };
