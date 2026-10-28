@@ -66,8 +66,8 @@ const skillGroups: { title: string; Icon: LucideIcon; skills: string[] }[] = [
 ];
 
 const softSkills = ['Leadership', 'Team management', 'Problem solving', 'Communication', 'Safety mindset', 'Training', 'Vendor management', 'Attention to detail'];
-const clients = ['Molars Dental Hospital', 'Epione Health', 'AMEK', 'Sai Pharmaceuticals', 'Elmar Med Systems', 'Technical University of Mombasa'];
-const filters = ['All', 'Medical Gas', 'Equipment Installation', 'Maintenance Programs', 'Consulting', 'Training'];
+const clients = ['Molars Dental Hospital', 'Epione Health', 'Sai Pharmaceuticals', 'Elmar Med Systems', 'Technical University of Mombasa'];
+const filters = ['All', 'Medical systems  infrastrcture', 'Equipment Installation', 'Maintenance Programs', 'Consulting', 'Training'];
 const regulatoryResources = [
   { label: 'PPB MDSW / SaMD guideline', href: 'https://web.pharmacyboardkenya.org/download/guideline-on-regulation-of-medical-device-software-in-kenya-mdsw/' },
   { label: 'Medical-device & IVD registration guideline', href: 'https://web.pharmacyboardkenya.org/download/guidelines-for-registration-of-medical-devices-including-in-vitro-diagnostics/' },
@@ -290,6 +290,7 @@ function App() {
         </section>
 
         <section className="section section-tint" id="skills">
+          <img className="section-background" src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1280&q=75" srcSet="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=640&q=65 640w, https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=960&q=70 960w, https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1280&q=75 1280w" sizes="(max-width: 720px) 100vw, 1280px" alt="" aria-hidden="true" loading="lazy" decoding="async" />
           <div className="page-width"><SectionHeading first="My" accent="Toolbox" />
             <div className="toolbox-grid">{skillGroups.map(({ title, Icon, skills }, index) => <article className="tool-card reveal" key={title} style={{ '--delay': `${index * 55}ms` } as React.CSSProperties}><div className="tool-card-heading"><span className="tool-icon"><Icon size={19} /></span><h3>{title}</h3></div><div className="tool-chips">{skills.map((skill) => <span key={skill}>{skill}</span>)}</div></article>)}</div>
             <div className="regulatory-resources">
@@ -301,6 +302,7 @@ function App() {
         </section>
 
         <section className="section page-width" id="portfolio">
+          <img className="section-background" src="https://images.unsplash.com/photo-1512102438733-bfa4ed29aef7?auto=format&fit=crop&w=1280&q=75" srcSet="https://images.unsplash.com/photo-1512102438733-bfa4ed29aef7?auto=format&fit=crop&w=640&q=65 640w, https://images.unsplash.com/photo-1512102438733-bfa4ed29aef7?auto=format&fit=crop&w=960&q=70 960w, https://images.unsplash.com/photo-1512102438733-bfa4ed29aef7?auto=format&fit=crop&w=1280&q=75 1280w" sizes="(max-width: 720px) 100vw, 1280px" alt="" aria-hidden="true" loading="lazy" decoding="async" />
           <SectionHeading first="Featured" accent="Projects" />
           <div className="project-toolbar"><div className="filter-row" role="group" aria-label="Filter projects">{filters.map((filter) => {
             const count = filter === 'All' ? projects.length : projects.filter((project) => project.categories.includes(filter)).length;
@@ -310,6 +312,7 @@ function App() {
         </section>
 
         <section className="section section-tint" id="experience">
+          <img className="section-background" src="https://images.unsplash.com/photo-1721076749160-e5a08d53c787?auto=format&fit=crop&w=1280&q=75" srcSet="https://images.unsplash.com/photo-1721076749160-e5a08d53c787?auto=format&fit=crop&w=640&q=65 640w, https://images.unsplash.com/photo-1721076749160-e5a08d53c787?auto=format&fit=crop&w=960&q=70 960w, https://images.unsplash.com/photo-1721076749160-e5a08d53c787?auto=format&fit=crop&w=1280&q=75 1280w" sizes="(max-width: 720px) 100vw, 1280px" alt="" aria-hidden="true" loading="lazy" decoding="async" />
           <div className="page-width"><SectionHeading first="Work" accent="Experience" />
             <div className="career-chart" aria-label="Interactive career timeline">
               <svg className="career-line" viewBox="0 0 1000 250" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="career-fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stopColor="currentColor" stopOpacity=".18" /><stop offset="1" stopColor="currentColor" stopOpacity="0" /></linearGradient></defs><path className="career-area" d="M0 205 H160 V182 H360 V145 H555 V104 H760 V65 H1000 V250 H0Z" /><path className="career-path" d="M0 205 H160 V182 H360 V145 H555 V104 H760 V65 H1000" /></svg>
